@@ -27,6 +27,19 @@ app.get("/keiyo_add", (req, res) => {
    res.render('db1', { data: station });
 });
 
+let club = [
+  { id:1, name:"アーセナル", city:"ロンドン", stadium:"エミレーツ・スタジアム"},
+  { id:2, name:"チェルシー", city:"ロンドン", stadium:"スタンフォード・ブリッジ"},
+  { id:3, name:"リヴァプール", city:"リヴァプール", stadium:"アンフィールド"},
+  { id:4, name:"マンチェスター・シティ", city:"マンチェスター", stadium:"エティハド・スタジアム"},
+  { id:5, name:"マンチェスター・ユナイテッド", city:"マンチェスター", stadium:"オールド・トラッフォード"},
+  { id:6, name:"トッテナム・ホットスパー", city:"ロンドン", stadium:"トッテナム・ホットスパー・スタジアム"},
+];
+
+app.get("/premier", (req, res) => {
+  res.render('premier', { data: club });
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
