@@ -40,6 +40,16 @@ app.get("/premier", (req, res) => {
   res.render('premier', { data: club });
 });
 
+app.get("/premier_add", (req, res) => {
+  let id = req.query.id;
+  let name = req.query.name;
+  let city = req.query.city;
+  let stadium = req.query.stadium;
+  let newdata = { id: id, name: name, city: city, stadium: stadium };
+  club.push( newdata );
+  res.render('premier', { data: club });
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
